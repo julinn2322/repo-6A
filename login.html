@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <h1>Página de Login (demo)</h1>
+  <nav><a href="index.html">Inicio</a></nav>
+
+  <form id="loginForm">
+    <label>Usuario: <input type="text" id="user" required></label><br><br>
+    <label>Contraseña: <input type="password" id="pass" required></label><br><br>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const u = document.getElementById('user').value;
+      const p = document.getElementById('pass').value;
+      // Demo: validación simple (no usar en producción)
+      if(u === 'admin' && p === '1234'){
+        alert('Login correcto (demo)');
+        window.location = 'index.html';
+      } else {
+        alert('Usuario o contraseña incorrectos (demo). Prueba admin / 1234');
+      }
+    });
+  </script>
+</body>
+</html>

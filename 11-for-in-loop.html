@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>11 - For In Loop</title>
+</head>
+<body>
+
+<h2>Ejercicio 11 - For In Loop</h2>
+
+<!-- ===================================================
+    EJEMPLO ÚNICO - FOR IN SOBRE OBJETO
+=================================================== -->
+<hr>
+<h3>For In recorriendo un objeto</h3>
+<pre>
+var persona = {
+    nombre: "Juan",
+    edad: 20,
+    ciudad: "Buenos Aires"
+};
+
+for (var dato in persona){
+    document.write(dato + ": " + persona[dato] + "<br>");
+}
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - For In</h3>");
+    
+    var persona = {
+        nombre: "Juan",
+        edad: 20,
+        ciudad: "Buenos Aires"
+    };
+
+    for (var dato in persona){
+        document.write(dato + ": " + persona[dato] + "<br>");
+    }
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

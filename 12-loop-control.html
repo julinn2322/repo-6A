@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>12 - Loop Control</title>
+</head>
+<body>
+
+<h2>Ejercicio 12 - Loop Control</h2>
+
+<!-- ===================================================
+    EJEMPLO 1 - BREAK
+=================================================== -->
+<hr>
+<h3>Uso de break</h3>
+<pre>
+for (var i = 1; i <= 10; i++){
+    if(i == 5){
+        break;
+    }
+    document.write("Valor: " + i + "<br>");
+}
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - break</h3>");
+    for (var i = 1; i <= 10; i++){
+        if(i == 5){
+            break;
+        }
+        document.write("Valor: " + i + "<br>");
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 2 - CONTINUE
+=================================================== -->
+<hr>
+<h3>Uso de continue</h3>
+<pre>
+for (var i = 1; i <= 5; i++){
+    if(i == 3){
+        continue;
+    }
+    document.write("Número: " + i + "<br>");
+}
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado - continue</h3>");
+    for (var i = 1; i <= 5; i++){
+        if(i == 3){
+            continue;
+        }
+        document.write("Número: " + i + "<br>");
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 3 - LABELS
+=================================================== -->
+<hr>
+<h3>Uso de etiquetas (labels)</h3>
+<pre>
+etiqueta1:
+for (var i = 1; i <= 3; i++){
+    for (var j = 1; j <= 3; j++){
+        if(i == 2 && j == 2){
+            break etiqueta1;
+        }
+        document.write("i = " + i + ", j = " + j + "<br>");
+    }
+}
+</pre>
+
+<button onclick="ej3()">Ejecutar ejemplo</button>
+
+<script>
+function ej3(){
+    document.write("<h3>Resultado - Labels</h3>");
+
+    etiqueta1:
+    for (var i = 1; i <= 3; i++){
+        for (var j = 1; j <= 3; j++){
+            if(i == 2 && j == 2){
+                break etiqueta1;
+            }
+            document.write("i = " + i + ", j = " + j + "<br>");
+        }
+    }
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

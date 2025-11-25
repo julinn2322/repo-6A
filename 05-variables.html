@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05 - Variables</title>
+</head>
+<body>
+
+<h2>Ejercicio 05 - Variables</h2>
+
+<!-- EJEMPLO 1 -->
+<hr>
+<h3>Declaración de variables</h3>
+<pre>
+var money;
+var name;
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado Ejemplo 1:</h3>");
+    var money;
+    var name;
+    document.write("Variables declaradas correctamente.");
+}
+</script>
+
+<!-- EJEMPLO 2 -->
+<hr>
+<h3>Declarar múltiples variables</h3>
+<pre>
+var money, name;
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado Ejemplo 2:</h3>");
+    var money, name;
+    document.write("Declaración múltiple correcta.");
+}
+</script>
+
+<!-- EJEMPLO 3 -->
+<hr>
+<h3>Inicialización de variables</h3>
+<pre>
+var name = "Ali";
+var money;
+money = 2000.50;
+</pre>
+
+<button onclick="ej3()">Ejecutar ejemplo</button>
+
+<script>
+function ej3(){
+    document.write("<h3>Resultado Ejemplo 3:</h3>");
+    var name = "Ali";
+    var money;
+    money = 2000.50;
+    document.write("Nombre: " + name + "<br>Dinero: " + money);
+}
+</script>
+
+<!-- EJEMPLO 4 -->
+<hr>
+<h3>Ámbito de variables (Scope)</h3>
+<pre>
+var myVar = "global";
+
+function checkscope() {
+   var myVar = "local";
+   document.write(myVar);
+}
+</pre>
+
+<button onclick="ej4()">Ejecutar ejemplo</button>
+
+<script>
+function ej4(){
+    document.write("<h3>Resultado Ejemplo 4:</h3>");
+    var myVar = "global";
+    function checkscope(){
+        var myVar = "local";
+        document.write(myVar);
+    }
+    checkscope();
+}
+</script>
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

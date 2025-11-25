@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>08 - Switch Case</title>
+</head>
+<body>
+
+<h2>Ejercicio 08 - Switch Case</h2>
+
+<!-- ===================================================
+    EJEMPLO 1 - SWITCH BÁSICO
+=================================================== -->
+<hr>
+<h3>Switch básico</h3>
+<pre>
+var dia = 3;
+var nombre;
+
+switch (dia) {
+    case 1: nombre = "Lunes"; break;
+    case 2: nombre = "Martes"; break;
+    case 3: nombre = "Miércoles"; break;
+    case 4: nombre = "Jueves"; break;
+    case 5: nombre = "Viernes"; break;
+    default: nombre = "Fin de semana";
+}
+
+document.write("Hoy es " + nombre);
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - Switch básico</h3>");
+    var dia = 3;
+    var nombre;
+
+    switch (dia) {
+        case 1: nombre = "Lunes"; break;
+        case 2: nombre = "Martes"; break;
+        case 3: nombre = "Miércoles"; break;
+        case 4: nombre = "Jueves"; break;
+        case 5: nombre = "Viernes"; break;
+        default: nombre = "Fin de semana";
+    }
+
+    document.write("Hoy es " + nombre);
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 2 - SWITCH CON MÚLTIPLES CASOS
+=================================================== -->
+<hr>
+<h3>Switch con múltiples casos</h3>
+<pre>
+var fruta = "manzana";
+var mensaje;
+
+switch (fruta) {
+   case "manzana":
+   case "pera":
+   case "durazno":
+       mensaje = "Es una fruta comestible";
+       break;
+   default:
+       mensaje = "No es una fruta del grupo";
+}
+
+document.write(mensaje);
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado - Switch múltiples casos</h3>");
+    var fruta = "manzana";
+    var mensaje;
+
+    switch (fruta) {
+        case "manzana":
+        case "pera":
+        case "durazno":
+            mensaje = "Es una fruta comestible";
+            break;
+        default:
+            mensaje = "No es una fruta del grupo";
+    }
+
+    document.write(mensaje);
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

@@ -1,57 +1,66 @@
-el profe me dio esta consigna:13-JavaScript
-Realizar los ejercicios de java Script, sobre el index.htm se debera realizar un link a cada uno de los ejercicios, y debe volver al index como quieran.
-
-los ejercicios son
-
-- 5-variables 
-
-   paginas  18
-
-       para que se pueda ver la funcion hay que agregar un boton
-
-- 6-operadores
-
-    paginas 21 al 37
-
--7 if-else 
-
-    paginas 39-42
-
--8-Switch-Case
-
-   paginas 44-46
-
--9-while loop
-
-  paginas 48-50
-
--10-for loop
-
- paginas 53-
-
--11 for in loop
-
- paginas 55
-
--12-loop control
-
-  paginas 60-62
-
--13 funciones
-
-pagina 65-72        esto se hace con el pdf que te adjunto.                                                                                      aca te envio el codigo del inicio de mi pagina web, neceisto que en la misma pongas un boton que diga JAVASCRIPT  y que si lo apretas despliegue los titulos de los codigos de la consigna que el profe pide a traves del libro de java. si yo apreto alguno de los titulos tiene que llevar a la pagina web de ese titulo que realice lo que le codigo hace. Debe tener un boton de volver: <!doctype html> 
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Inicio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <style>
-    body{font-family:system-ui,Arial;max-width:900px;margin:20px auto;padding:10px}
-    nav a{margin-right:10px}
+    body{
+      font-family: system-ui, Arial;
+      max-width:900px;
+      margin:20px auto;
+      padding:10px;
+    }
+
+    nav a{
+      margin-right:10px;
+    }
+
+    /* Estilos del botón desplegable */
+    .dropdown{
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-btn{
+      padding:6px 10px;
+      cursor:pointer;
+      background:#ddd;
+      border:1px solid #aaa;
+      border-radius:5px;
+    }
+
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:white;
+      border:1px solid #999;
+      padding:10px;
+      margin-top:5px;
+      border-radius:6px;
+      z-index:10;
+    }
+
+    .dropdown-content a{
+      display:block;
+      margin:5px 0;
+      text-decoration:none;
+      color:#333;
+    }
   </style>
+
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById("js-menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </head>
+
 <body>
   <h1>Bienvenido / Inicio</h1>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="presentacion.html">Presentación</a>
@@ -62,6 +71,23 @@ pagina 65-72        esto se hace con el pdf que te adjunto.                     
     <a href="AgregarUsuario.html">Agregar Usuario</a>
     <a href="ListarUsuario.html">Listar Usuario</a>
     <a href="https://github.com/TU_USUARIO" target="_blank">Mi GitHub</a>
+
+    <!-- ✔ BOTÓN DESPLEGABLE DE JAVASCRIPT -->
+    <div class="dropdown">
+      <div class="dropdown-btn" onclick="toggleMenu()">JavaScript ▼</div>
+
+      <div class="dropdown-content" id="js-menu">
+        <a href="05-variables.html">5 - Variables</a>
+        <a href="06-operadores.html">6 - Operadores</a>
+        <a href="07-if-else.html">7 - If / Else</a>
+        <a href="08-switch-case.html">8 - Switch Case</a>
+        <a href="09-while.html">9 - While Loop</a>
+        <a href="10-for.html">10 - For Loop</a>
+        <a href="11-for-in.html">11 - For-In Loop</a>
+        <a href="12-loop-control.html">12 - Loop Control</a>
+        <a href="13-funciones.html">13 - Funciones</a>
+      </div>
+    </div>
   </nav>
 
   <p>Este repositorio contiene las páginas solicitadas. Reemplaza <code>TU_USUARIO</code> por tu usuario de GitHub y sube los archivos al repo.</p>

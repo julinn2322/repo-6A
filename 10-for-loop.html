@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10 - For Loop</title>
+</head>
+<body>
+
+<h2>Ejercicio 10 - For Loop</h2>
+
+<!-- ===================================================
+    EJEMPLO 1 - FOR BÁSICO
+=================================================== -->
+<hr>
+<h3>For básico</h3>
+<pre>
+for (var i = 1; i <= 5; i++){
+    document.write("Número: " + i + "<br>");
+}
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - For básico</h3>");
+    for (var i = 1; i <= 5; i++){
+        document.write("Número: " + i + "<br>");
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 2 - FOR RECORRIENDO UN ARREGLO
+=================================================== -->
+<hr>
+<h3>For recorriendo un arreglo</h3>
+<pre>
+var frutas = ["Manzana", "Pera", "Durazno"];
+
+for(var i = 0; i < frutas.length; i++){
+    document.write(frutas[i] + "<br>");
+}
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado - For con arreglo</h3>");
+    var frutas = ["Manzana", "Pera", "Durazno"];
+
+    for(var i = 0; i < frutas.length; i++){
+        document.write(frutas[i] + "<br>");
+    }
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

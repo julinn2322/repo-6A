@@ -1,41 +1,95 @@
 <!doctype html>
-<html lang="es"> 
-<head> 
-  <meta charset="utf-8"> 
-  <title>Inicio</title> 
-  <meta name="viewport" content="width=device-width,initial-scale=1"> 
-  <style> 
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Inicio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <style>
     body{
-      font-family:system-ui,Arial;
+      font-family: system-ui, Arial;
       max-width:900px;
       margin:20px auto;
-      padding:10px
-    } 
+      padding:10px;
+    }
+
     nav a{
-      margin-right:10px
-    } 
-  </style> 
-</head> 
+      margin-right:10px;
+    }
 
-<body> 
-  <h1>Bienvenido / Inicio</h1> 
+    /* Estilos del botón desplegable */
+    .dropdown{
+      position: relative;
+      display: inline-block;
+    }
 
-  <nav> 
-    <a href="index.html">Inicio</a> 
-    <a href="presentacion.html">Presentación</a> 
-    <a href="MejoresAmigos.html">Mejores Amigos</a> 
-    <a href="ComidasPreferidas.html">Comidas Preferidas</a> 
-    <a href="login.html">Login</a> 
-    <a href="BuscarUsuario.html">Buscar Usuario</a> 
-    <a href="AgregarUsuario.html">Agregar Usuario</a> 
-    <a href="ListarUsuario.html">Listar Usuario</a> 
-    <a href="https://github.com/TU_USUARIO" target="_blank">Mi GitHub</a> 
-  </nav> 
+    .dropdown-btn{
+      padding:6px 10px;
+      cursor:pointer;
+      background:#ddd;
+      border:1px solid #aaa;
+      border-radius:5px;
+    }
 
-  <p>
-    Este repositorio contiene las páginas solicitadas. 
-    Reemplaza <code>TU_USUARIO</code> por tu usuario de GitHub 
-    y sube los archivos al repo.
-  </p> 
-</body> 
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:white;
+      border:1px solid #999;
+      padding:10px;
+      margin-top:5px;
+      border-radius:6px;
+      z-index:10;
+    }
+
+    .dropdown-content a{
+      display:block;
+      margin:5px 0;
+      text-decoration:none;
+      color:#333;
+    }
+  </style>
+
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById("js-menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Bienvenido / Inicio</h1>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="MejoresAmigos.html">Mejores Amigos</a>
+    <a href="ComidasPreferidas.html">Comidas Preferidas</a>
+    <a href="login.html">Login</a>
+    <a href="BuscarUsuario.html">Buscar Usuario</a>
+    <a href="AgregarUsuario.html">Agregar Usuario</a>
+    <a href="ListarUsuario.html">Listar Usuario</a>
+    <a href="https://github.com/TU_USUARIO" target="_blank">Mi GitHub</a>
+
+    <!-- ✔ BOTÓN DESPLEGABLE DE JAVASCRIPT -->
+    <div class="dropdown">
+      <div class="dropdown-btn" onclick="toggleMenu()">JavaScript ▼</div>
+
+      <div class="dropdown-content" id="js-menu">
+        <a href="05-variables.html">5 - Variables</a>
+        <a href="06-operadores.html">6 - Operadores</a>
+        <a href="07-if-else.html">7 - If / Else</a>
+        <a href="08-switch-case.html">8 - Switch Case</a>
+        <a href="09-while.html">9 - While Loop</a>
+        <a href="10-for.html">10 - For Loop</a>
+        <a href="11-for-in.html">11 - For-In Loop</a>
+        <a href="12-loop-control.html">12 - Loop Control</a>
+        <a href="13-funciones.html">13 - Funciones</a>
+      </div>
+    </div>
+  </nav>
+
+  <p>Este repositorio contiene las páginas solicitadas. Reemplaza <code>TU_USUARIO</code> por tu usuario de GitHub y sube los archivos al repo.</p>
+</body>
 </html>

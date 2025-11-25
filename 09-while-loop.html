@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>09 - While Loop</title>
+</head>
+<body>
+
+<h2>Ejercicio 09 - While Loop</h2>
+
+<!-- ===================================================
+    EJEMPLO 1 - WHILE
+=================================================== -->
+<hr>
+<h3>While</h3>
+<pre>
+var i = 1;
+
+while(i <= 5){
+    document.write("Número: " + i + "<br>");
+    i++;
+}
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - While</h3>");
+    var i = 1;
+    while(i <= 5){
+        document.write("Número: " + i + "<br>");
+        i++;
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 2 - DO WHILE
+=================================================== -->
+<hr>
+<h3>Do While</h3>
+<pre>
+var i = 1;
+
+do {
+    document.write("Valor: " + i + "<br>");
+    i++;
+} while(i <= 5);
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado - Do While</h3>");
+    var i = 1;
+    do {
+        document.write("Valor: " + i + "<br>");
+        i++;
+    } while(i <= 5);
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>

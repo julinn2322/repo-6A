@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>07 - If / Else</title>
+</head>
+<body>
+
+<h2>Ejercicio 07 - If / Else</h2>
+
+<!-- ===================================================
+    EJEMPLO 1 - IF SIMPLE
+=================================================== -->
+<hr>
+<h3>IF Simple</h3>
+<pre>
+var edad = 20;
+
+if(edad > 18){
+   document.write("Es mayor de edad");
+}
+</pre>
+
+<button onclick="ej1()">Ejecutar ejemplo</button>
+
+<script>
+function ej1(){
+    document.write("<h3>Resultado - IF Simple</h3>");
+    var edad = 20;
+
+    if(edad > 18){
+        document.write("Es mayor de edad");
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 2 - IF...ELSE
+=================================================== -->
+<hr>
+<h3>IF / ELSE</h3>
+<pre>
+var edad = 16;
+
+if(edad >= 18){
+   document.write("Mayor de edad");
+} else {
+   document.write("Menor de edad");
+}
+</pre>
+
+<button onclick="ej2()">Ejecutar ejemplo</button>
+
+<script>
+function ej2(){
+    document.write("<h3>Resultado - IF / ELSE</h3>");
+    var edad = 16;
+
+    if(edad >= 18){
+        document.write("Mayor de edad");
+    } else {
+        document.write("Menor de edad");
+    }
+}
+</script>
+
+
+<!-- ===================================================
+    EJEMPLO 3 - IF...ELSE IF...ELSE
+=================================================== -->
+<hr>
+<h3>IF / ELSE IF / ELSE</h3>
+<pre>
+var nota = 8;
+
+if(nota == 10){
+    document.write("Excelente");
+} else if (nota >= 7){
+    document.write("Muy bien");
+} else if (nota >= 4){
+    document.write("Aprobado");
+} else {
+    document.write("Reprobado");
+}
+</pre>
+
+<button onclick="ej3()">Ejecutar ejemplo</button>
+
+<script>
+function ej3(){
+    document.write("<h3>Resultado - IF / ELSE IF / ELSE</h3>");
+    var nota = 8;
+
+    if(nota == 10){
+        document.write("Excelente");
+    } else if (nota >= 7){
+        document.write("Muy bien");
+    } else if (nota >= 4){
+        document.write("Aprobado");
+    } else {
+        document.write("Reprobado");
+    }
+}
+</script>
+
+
+<br><br>
+<button onclick="location.href='index.html'">Volver</button>
+
+</body>
+</html>
